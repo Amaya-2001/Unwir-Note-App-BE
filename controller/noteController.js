@@ -10,7 +10,7 @@ exports.addNote = async (req, res) => {
       title: req.body.title,
       description: req.body.description,
     };
-    console.log(data);
+
     const note = await noteObj.createNote(data);
     res.status(201).send(note);
   } catch (error) {
