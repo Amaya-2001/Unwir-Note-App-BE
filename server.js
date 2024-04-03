@@ -3,8 +3,11 @@ const routes = require("./route/noteRoute");
 const connect = require("./db");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const dotenv = require("dotenv");
 
-const PORT = 8000;
+dotenv.config();
+
+const PORT = process.env.PORT;
 
 const app = express();
 
