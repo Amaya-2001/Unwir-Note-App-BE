@@ -12,8 +12,6 @@ exports.addNote = async (req, res) => {
     };
     console.log(data);
     const note = await noteObj.createNote(data);
-
-    // const note = await noteOperations.createNote(data);
     res.status(201).send(note);
   } catch (error) {
     res.status(404).json({ message: "Can not create a new note!" });

@@ -4,9 +4,7 @@ class noteOperations {
   //create a note
   async createNote(data) {
     try {
-      console.log("Umma kate mara wadeee");
       const newNote = await Note.create(data);
-      console.log(newNote);
       return newNote;
     } catch (error) {
       console.log(error);
@@ -64,6 +62,4 @@ class noteOperations {
   }
 }
 
-//export the class
-// export const noteOperations = new noteOperations();
 module.exports = noteOperations;
